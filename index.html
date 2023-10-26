@@ -6,6 +6,54 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        let age = 100;
+        let age2 = age;
+
+        console.log(age, age2);
+        age = 200;
+        console.log(age, age2);
+        
+        // arrays
+
+        const players = [ 'Wes', 'Sara', 'Ryan', 'Poppy'];
+
+        const team = players;
+        console.log(players, team);
+
+        players[3] = 'Lux';
+
+        console.log(players, team);
+
+        // array copy
+
+        const team2 = players.slice();
+        const team3 = [].concat(players);
+        const team4 = [...players];
+        const team5 = Array.from(players);
+
+        console.log(team2);
+
+        const person = {
+            name: 'Emi',
+            age: 80
+        };
+
+        const cap = Object.assign({}, person, {number: 99});
+        const cap3 = {...person};
+
+        const wes = {
+            name: 'wes',
+            age: 100,
+            social: {
+                twitter: '@wes',
+                facebook: 'wes'
+            }
+        }
+        console.clear()
+        console.log(wes)
+        const dev = {...wes};
+        console.log(dev)
+    </script>
 </body>
 </html>
